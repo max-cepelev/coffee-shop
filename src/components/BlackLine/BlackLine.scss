@@ -1,0 +1,13 @@
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    margin: 15px 0;
+    span {
+        width: 60px;
+        height: 1px;
+        background-color: #000000;
+    }
+}

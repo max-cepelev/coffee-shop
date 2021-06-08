@@ -1,0 +1,43 @@
+.main {
+    height: 100vh;
+    background: url('./main_bg.jpg') center (center/cover) no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 200px;
+        height: 30px;
+        margin: 15px 0 30px 0;
+        span {
+            width: 60px;
+            height: 1px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+        img {
+            height: 100%;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+    &__subtitle {
+        color:#FFFFFF;
+    }
+    &__link {
+        width: 120px;
+        height: 30px;
+        border: 1px solid #FFFFFF;
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+}
