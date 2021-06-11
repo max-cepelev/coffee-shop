@@ -1,0 +1,65 @@
+.search {
+    display: block;
+    margin-top: 60px;
+    &__panel {
+        display: grid;
+        grid-template-columns: 285px 325px;
+        justify-content: center;
+        column-gap: 85px;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__input {
+        width: 180px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        font-family: Merienda;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 17px;
+        text-align: center;
+        border: none;
+        &:focus {
+            outline: 0;
+            outline-offset: 0;
+        }
+    }
+    &__buttons {
+        width: 235px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        width: 75px;
+        height: 30px;
+        background-color: #FFFFFF;
+        border: none;
+        font-family: Merienda;
+        font-style: normal;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        &:first-child {
+            border-radius: 4px 0px 0px 4px;
+        }
+        &:last-child {
+            border-radius: 0px 4px 4px 0px;
+        }
+    }
+    &__result {
+        margin: 60px auto;
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 220px);
+        column-gap: 70px;
+        row-gap: 60px;
+        justify-content: center;
+        align-items: center;
+        padding: 0 60px;
+    }
+}

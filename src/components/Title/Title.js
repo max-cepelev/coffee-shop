@@ -11,7 +11,7 @@ function Title() {
             </div>
             <h2 className="subtitle subtitle-white">We makes every day full of energy and taste</h2>
             <h2 className="subtitle subtitle-white">Want to try our beans?</h2>
-            <a  className="main__link" href="#">More</a>
+            <a  className="main__link" href="#about">More</a>
         </section>
     )
 }

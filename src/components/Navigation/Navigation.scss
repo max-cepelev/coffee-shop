@@ -1,10 +1,11 @@
 .nav {
-    width: 325px;
+    width: clamp(270px, 55vw, 325px);
     padding-left: 30px;
     &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         list-style-type: none;
         padding: 0;
         margin: 0;
@@ -13,19 +14,6 @@
         position: absolute;
         bottom: -16px;
         left: -32px;
-        img {
-            fill: #FFFFFF;
-        }
-        &.white {
-            svg {
-                fill: #FFFFFF;
-            }
-        }
-        &.black {
-            svg {
-                fill: #000000;
-            }
-        }
     }
     &__link {
         position: relative;
@@ -39,6 +27,12 @@
         }
         &.black {
             color: black;
+        }
+    }
+    &__item {
+        transition: all .3s;
+        &:hover {
+            filter: drop-shadow(0 0 2px #fff);
         }
     }
 }

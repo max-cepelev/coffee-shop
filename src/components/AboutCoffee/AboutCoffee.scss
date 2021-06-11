@@ -1,0 +1,27 @@
+.aboutCoffee {
+    display: grid;
+    grid-template-columns: 395px minmax(120px, 420px);
+    column-gap: 55px;
+    row-gap: 60px;
+    justify-content: center;
+    margin: 70px auto;
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        p {
+            margin-top: 10px;
+        }
+    }
+    &__img {
+        width: 100%;
+        filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

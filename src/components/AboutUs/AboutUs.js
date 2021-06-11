@@ -1,11 +1,11 @@
-import './About.scss';
+import './AboutUs.scss';
 import BlackLine from '../BlackLine/BlackLine';
-function About() {
+function AboutUs() {
     return (
-        <section className="about">
+        <section className="aboutus" id="about">
             <h2 className="subtitle">About Us</h2>
             <BlackLine/>
-            <p className="about__text text">Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+            <p className="aboutus__text text">Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
             Afraid at highly months do things on at. Situation recommend objection do intention
             so questions. As greatly removed calling pleased improve an. Last ask him cold feel
             met spot shy want. Children me laughing we prospect answered followed. At it went
@@ -19,4 +19,4 @@ function About() {
     )
 }
 
-export default About;
+export default AboutUs;

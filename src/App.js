@@ -1,20 +1,18 @@
-import Title from './components/Title/Title';
-import Header from './components/Header/Header';
-import About from './components/About/About';
-import Best from './components/Best/Best';
-import Footer from './components/Footer/Footer';
-import './App.scss';
+import './App.scss'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {MainPage, OurCoffeePage, ForYourPleasurePage, CoffeePage} from './components/Pages/'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Title/>
-      <About/>
-      <Best/>
-      <Footer/>
-    </>
-
+    <Router>
+      <ScrollToTop/>
+      <Route path="/" exact component={MainPage}/>
+      <Route path="/our_coffee" exact component={OurCoffeePage}/>
+      <Route path="/for_your_pleasure" component={ForYourPleasurePage}/>
+      <Route path="/our_coffee/:id" render={
+        ({match}) => <CoffeePage id={match.params.id-1}/>}/>
+    </Router >
   );
 }
 
