@@ -10,7 +10,7 @@ function AboutCoffee(props) {
                 <BlackLine/>
                 <div className="aboutCoffee__desc">
                     <p className="text"><span>Country: </span>{countryOfOrigin}</p>
-                    <p className="text" dangerouslySetInnerHTML={{__html: description}}></p>
+                    <p className="text" dangerouslySetInnerHTML={{__html: "<span>Description: </span>" + description}}></p>
                     <p className="subtitle"><span>Price:</span>{`  ${price}$`}</p>
                 </div>
             </div>

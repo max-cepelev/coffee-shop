@@ -3,3 +3,9 @@
     top: 58px;
     left: 150px;
 }
+
+@media (max-width: 670px) {
+    .header {
+        left: 14px;
+    }
+}

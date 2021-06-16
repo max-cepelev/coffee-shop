@@ -4,12 +4,16 @@
     column-gap: 55px;
     row-gap: 60px;
     justify-content: center;
-    margin: 70px auto;
+    align-items: center;
+    margin: 70px auto 18px auto;
+    padding: 0 25px;
     &__text {
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-self: start;
         margin-top: 10px;
+        text-align: center;
         p {
             margin-top: 10px;
         }
@@ -19,9 +23,21 @@
         filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
     }
     &__desc {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        p {
+            text-align: left;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .aboutCoffee {
+        grid-template-columns: 1fr;
+        &__img {
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 }

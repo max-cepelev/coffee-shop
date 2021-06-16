@@ -6,11 +6,11 @@
         grid-template-columns: 285px 325px;
         justify-content: center;
         column-gap: 85px;
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     &__input {
         width: 180px;
@@ -61,5 +61,22 @@
         justify-content: center;
         align-items: center;
         padding: 0 60px;
+    }
+}
+
+@media (max-width: 715px) {
+    .search {
+        margin-top: 30px;
+        &__panel {
+            grid-template-columns: minmax(320px, 500px);
+            grid-template-rows: repeat(2, 70px);
+            row-gap: 30px;
+        }
+        &__item {
+            flex-direction: column;
+        }
+        &__buttons {
+            flex-direction: row;
+        }
     }
 }

@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import './SearchPanel.scss';
-import Fuse from "fuse.js";
+import React, {useState} from 'react'
+import './SearchPanel.scss'
+import Fuse from "fuse.js"
 import coffeeDB from '../../coffeeDB'
 import CardsContainer from '../CardsContainer/CardsContainer'
 
@@ -30,15 +30,17 @@ function SearchPanel() {
         }
     };
 
+    // search by country
     const onClickSearch = (value) => {
-        setCoffeeList(coffeeDB);
-        searchData(value, ["countryOfOrigin"]);
+        setCoffeeList(()=> {
+            return coffeeDB.filter((item) => item.countryOfOrigin.indexOf(value) !== -1)
+        })
     }
 
     return (
         <section className="search">
             <div className="search__panel">
-                <div>
+                <div className="search__item">
                     <p className="text">Lookiing for</p>
                     <input
                         type="text"
@@ -46,7 +48,7 @@ function SearchPanel() {
                         placeholder="start typing here..."
                         onChange={(e) => searchData(e.target.value, ["brand", "name"])}/>
                 </div>
-                <div>
+                <div className="search__item">
                     <p className="text">Or filter</p>
                         <div className="search__buttons">
                         <button onClick={() => onClickSearch("Brazil")} className="search__button text">Brazil</button>

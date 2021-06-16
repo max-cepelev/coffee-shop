@@ -4,10 +4,17 @@ import AboutSection from '../AboutSection/AboutSection'
 import coffeeDB from '../../coffeeDB'
 import CardsContainer from '../CardsContainer/CardsContainer'
 import Footer from '../Footer/Footer'
+import { useState, useEffect } from 'react';
+
+import "./page.scss"
 
 function ForYourPleasurePage() {
+    const [animate, setAnimate] = useState(false);
+    useEffect(() => {
+        setAnimate(true);
+    }, [])
     return (
-        <>
+        <div className={`page ${animate ? '' : 'hide'}`}>
             <Header/>
             <PageTitle title="For your pleasure" imageUrl="/images/ForYourPleasurePage.png"/>
             <AboutSection
@@ -17,7 +24,7 @@ function ForYourPleasurePage() {
             />
             <CardsContainer array={coffeeDB}/>
             <Footer/>
-        </>
+        </div>
     )
 }
 
