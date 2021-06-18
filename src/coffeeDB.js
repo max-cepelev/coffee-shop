@@ -81,7 +81,7 @@ const coffeeDB = [
         brand: "PRESTO",
         weight: "1 kg",
         countryOfOrigin: "Santa Barbara, Honduras & Morgiana, Brazil",
-        name: "ROCKET ROAST COFFEE BEANS",
+        name: "CARBON",
         description: "A deliciously smooth blend of beans, cultivated in the high altitude regions of Santa Bárbara, Honduras and Mogiana, Brazil. These beans are wonderfully rich, with notes of dark chocolate and roasted pecans finished with a soft, well-balanced fruity finish.",
         price: 19.99,
         imageUrl: "/images/coffee/CarbonCoffee.jpg",

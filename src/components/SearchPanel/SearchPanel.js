@@ -1,12 +1,28 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './SearchPanel.scss'
 import Fuse from "fuse.js"
-import coffeeDB from '../../coffeeDB'
+import Spinner from '../Spinner/Spinner'
+import getData from '../../services/getData'
 import CardsContainer from '../CardsContainer/CardsContainer'
 
 function SearchPanel() {
-
+    const [loading, setloading] = useState(true);
+    const [coffeeDB, setCoffeeDB] = useState([]);
     const [coffeeList, setCoffeeList] = useState(coffeeDB);
+
+    useEffect(() => {
+        if (coffeeDB.length === 0) {
+            setloading(true)
+            getData()
+                .then(data => {
+                    setCoffeeDB(data);
+                    setCoffeeList(data);
+                })
+        } else {
+            setloading(false)
+        }
+
+    }, [coffeeDB])
 
     const searchData = (pattern, keys) => {
         if (!pattern) {
@@ -33,7 +49,7 @@ function SearchPanel() {
     // search by country
     const onClickSearch = (value) => {
         setCoffeeList(()=> {
-            return coffeeDB.filter((item) => item.countryOfOrigin.indexOf(value) !== -1)
+            return coffeeDB.filter((item) => item.countryoforigin.indexOf(value) !== -1)
         })
     }
 
@@ -57,7 +73,7 @@ function SearchPanel() {
                     </div>
                 </div>
             </div>
-            <CardsContainer array={coffeeList}/>
+            {loading ? <Spinner/> : <CardsContainer array={coffeeList}/>}
         </section>
     )
 }
